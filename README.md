@@ -20,6 +20,17 @@
 | 5 | Implementing Recurrent Neural Network (RNN) for Temporal Data Classification |  |  |  |
 | 7 | Implementing Autoencoder Model for Image Compression |  |  |  |
 
+## DVA Lab Experiments
+
+| No. | Title | Date | CO | PO |
+|---------------|-------|------|----|----|
+| 1 | Install and Study Features of a Data Visualization Tool |  |  |  |
+| 2 | Create Basic Visualizations using Tableau/Power BI |  |  |  |
+| 3 | Perform Data Transformation Operations in Power BI |  |  |  |
+| 4 | Design Custom Visualizations and Interactive Dashboards in Power BI |  |  |  |
+| 5 | Set Up D3.js and Create Basic Visualizations |  |  |  |
+| 6 | Implementation of Multivariate Linear Regression using Python |  |  |  |
+
 ## NLP Lab Experiments
 
 | No. | Title | Date | CO | PO |
