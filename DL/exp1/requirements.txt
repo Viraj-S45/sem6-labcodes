@@ -1,0 +1,14 @@
+numpy
+pandas
+nltk
+seaborn
+opencv-python
+requests
+matplotlib
+xgboost
+scikit-learn
+fastai
+ipykernel
+ipywidgets
+tensorflow
+torch
