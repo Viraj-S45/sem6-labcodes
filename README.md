@@ -59,9 +59,11 @@
 | 3 | Apply Various Other Text Preprocessing Techniques for a Given Text (Stop Word Removal, Lemmatization/Stemming) | [Open](./NLP/exp3) | 27-01 |
 | 4 | Implementation of N-Gram (Bi-Gram) Model | [Open](./NLP/exp4) | 03-02 |
 | 5 | Implementation of Rule-Based Part of Speech (POS) Tagging | [Open](./NLP/exp5) | 10-02 |
-| 6 | Implementation of Chunking to Extract Noun Phrases | [Open](./NLP/exp6) | 24-02 |
-| 7 | Identify Semantic Relationships Between Words Using WordNet | [Open](./NLP/exp7) | 10-03 |
-| 8 | Python Program to Find Synonyms and Antonyms of the Word “Active” Using WordNet | [Open](./NLP/exp8) |  |
+| 6 | Implement word sense disambiguation methods. | [Open](./NLP/exp6) | 24-02 |
+| 7 | Lappin and Leass algorithm for Pronoun Resolution | [Open](./NLP/exp7) | 10-03 |
+| 8 | Case Study on Discourse Analysis | [Open](./NLP/exp8) |  |
+| 9 | NER | [Open](./NLP/exp8) |  |
+| 10 | Capstone Project | [Open](./NLP/exp8) |  |
 
 ---
 
