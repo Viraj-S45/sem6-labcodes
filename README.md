@@ -62,8 +62,8 @@
 | 6 | Implement word sense disambiguation methods. | [Open](./NLP/exp6) | 24-02 |
 | 7 | Lappin and Leass algorithm for Pronoun Resolution | [Open](./NLP/exp7) | 10-03 |
 | 8 | Case Study on Discourse Analysis | [Open](./NLP/exp8) |  |
-| 9 | NER | [Open](./NLP/exp8) |  |
-| 10 | Capstone Project | [Open](./NLP/exp8) |  |
+| 9 | NER | [Open](./NLP/exp9) |  |
+| 10 | Capstone Project | [Open](./NLP/exp10) |  |
 
 ---
 
