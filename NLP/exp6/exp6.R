@@ -1,39 +1,55 @@
 # Install packages
-install.packages("udpipe")
+install.packages("stringr")
+install.packages("tm")
 
-# Load library
-library(udpipe)
+# Load libraries
+library(stringr)
+library(tm)
 
-# language model
-model <- udpipe_download_model(language = "english")
-
-# Load the model
-ud_model <- udpipe_load_model(model$file_model)
-
-# Text data
-text_input <- "The small brown dog chased the frightened little cat near the tall green tree in the quiet park"
-
-# POS tagging
-annotation <- udpipe_annotate(ud_model, x = text_input)
-annotation_df <- as.data.frame(annotation)
-
-# Chunking Rule
-noun_phrases <- c()
-current_chunk <- c()
-
-for (i in 1:nrow(annotation_df)) {
-  tag <- annotation_df$upos[i]
-  word <- annotation_df$token[i]
-  if (tag %in% c("DET", "ADJ")) {
-    current_chunk <- c(current_chunk, word)
-  } else if (tag == "NOUN") {
-    current_chunk <- c(current_chunk, word)
-    noun_phrases <- c(noun_phrases, paste(current_chunk, collapse = " "))
-    current_chunk <- c()
-  } else {
-    current_chunk <- c()
-  }
+# Preprocess (lowercase, remove punctuation, stopwords)
+preprocess <- function(text) {
+  text <- tolower(text)
+  text <- removePunctuation(text)
+  words <- unlist(str_split(text, " "))
+  words <- words[!words %in% stopwords("en")]
+  return(words)
 }
 
-cat("\nExtracted Noun Phrases:\n")
-print(noun_phrases)
+# Lesk Algorithm
+lesk_wsd <- function(sentence, target_word, senses) {
+  
+  context <- preprocess(sentence)
+  max_overlap <- 0
+  best_sense <- ""
+  
+  for (sense in names(senses)) {
+    sense_words <- preprocess(senses[[sense]])
+    
+    # Count overlapping words
+    overlap <- length(intersect(context, sense_words))
+    
+    if (overlap > max_overlap) {
+      max_overlap <- overlap
+      best_sense <- sense
+    }
+  }
+  
+  return(best_sense)
+}
+
+# ambiguous word: "bank"
+senses <- list(
+  "Financial Institution" = "bank is a place where people deposit money and withdraw cash",
+  "River Side" = "bank is the land alongside a river or stream"
+)
+
+# Text Input
+sentence1 <- "I deposited money in the bank yesterday"
+sentence2 <- "He sat on the bank of the river"
+
+# WSD
+result1 <- lesk_wsd(sentence1, "bank", senses)
+result2 <- lesk_wsd(sentence2, "bank", senses)
+
+cat("Sentence 1:", sentence1, "\nPredicted Sense:", result1, "\n\n")
+cat("Sentence 2:", sentence2, "\nPredicted Sense:", result2, "\n")
