@@ -47,6 +47,10 @@
 | 4 | Design Custom Visualizations and Interactive Dashboards in Power BI | [Open](./DVA/exp4) |  |
 | 5 | Set Up D3.js and Create Basic Visualizations | [Open](./DVA/exp5) |  |
 | 6 | Implementation of Multivariate Linear Regression using Python | [Open](./DVA/exp6) |  |
+| 7 | Implementation of Logistic Regression using Python | [Open](./DVA/exp7) |  |
+| 8 | Develop a time series model | [Open](./DVA/exp8) |  |
+| 9 | Implement real-time data streaming using Python | [Open](./DVA/exp9) |  |
+| 10 | Design and implement a comprehensive dashboard Integrating various visualizations | [Open](./DVA/exp10) |  |
 
 ---
 
